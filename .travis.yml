@@ -6,4 +6,4 @@ before_install:
   - docker build -t  katcho/docker_react -f Dockerfile.dev .
 
 script:
-  - docker run katcho/docker_react npm run test -- --coverage
+  - docker run -e CI=true katcho/docker_react npm run test
